@@ -1,0 +1,18 @@
+{
+  "name": "Mathieu Best Studio",
+  "short_name": "MBS",
+  "description": "Développement d'applications mobiles, logiciels sur mesure et solutions numériques.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "lang": "fr-FR",
+  "orientation": "any"
+}
