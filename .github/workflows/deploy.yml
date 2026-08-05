@@ -38,7 +38,7 @@ jobs:
 
       # Étape 3 : Installer les dépendances
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       # Étape 4 : Builder le site → génère le dossier out/
       - name: Build
