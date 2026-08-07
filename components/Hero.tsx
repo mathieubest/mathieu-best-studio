@@ -1,9 +1,12 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
+import { useTranslation } from "@/lib/i18n/I18nProvider";
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,7 +35,6 @@ export default function Hero() {
       ref={sectionRef}
       className="relative overflow-hidden bg-gradient-subtle"
     >
-      {/* Background decorations */}
       <div className="absolute inset-0 bg-grid opacity-50" />
       <div
         className="pointer-events-none absolute right-0 top-0 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/4 rounded-full opacity-[0.07]"
@@ -51,33 +53,38 @@ export default function Hero() {
 
       <div className="container-custom relative">
         <div className="flex min-h-[90vh] flex-col items-center justify-center py-24 text-center sm:py-32 lg:py-40">
-          {/* Title */}
           <h1
             className="heading-xl mb-6 max-w-4xl text-balance opacity-0"
             data-animate
           >
-            Mathieu Best Studio
+            {t("hero.title")}
           </h1>
 
-          {/* Subtitle */}
           <p
             className="mb-4 max-w-2xl text-balance text-lg text-neutral-500 opacity-0 sm:text-xl"
             data-animate
           >
-            Développement d&apos;applications mobiles, logiciels sur mesure et
-            solutions numériques.
+            {t("hero.subtitle")}
           </p>
 
-          {/* Description */}
           <p
-            className="max-w-2xl text-balance text-base text-neutral-400 opacity-0 sm:text-lg"
+            className="mb-10 max-w-2xl text-balance text-base text-neutral-400 opacity-0 sm:text-lg"
             data-animate
           >
-            Mathieu Best Studio accompagne les entreprises dans la conception et
-            le développement de solutions numériques modernes. Nous développons
-            des applications iOS, Android, des logiciels métier, des plateformes
-            web et des outils utilisant l&apos;intelligence artificielle.
+            {t("hero.description")}
           </p>
+
+          <div
+            className="flex flex-wrap items-center justify-center gap-4 opacity-0"
+            data-animate
+          >
+            <Link href="/realisations" className="btn-primary px-8 py-3.5 text-base">
+              {t("hero.cta")}
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

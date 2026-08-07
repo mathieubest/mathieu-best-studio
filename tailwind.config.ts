@@ -51,6 +51,7 @@ const config: Config = {
         "slide-up": "slideUp 0.6s ease-out forwards",
         "float": "float 6s ease-in-out infinite",
         "float-delayed": "float 6s ease-in-out 2s infinite",
+        shimmer: "shimmer 2s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -64,6 +65,10 @@ const config: Config = {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" },
+        },
+        shimmer: {
+          "0%, 100%": { transform: "translateX(-100%)" },
+          "50%": { transform: "translateX(200%)" },
         },
       },
     },

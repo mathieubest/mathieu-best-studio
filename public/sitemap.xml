@@ -6,6 +6,16 @@
   <priority>1</priority>
 </url>
 <url>
+  <loc>https://mathieubeststudio.fr/realisations</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://mathieubeststudio.fr/about</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
   <loc>https://mathieubeststudio.fr/mentions-legales</loc>
   <changefreq>yearly</changefreq>
   <priority>0.5</priority>
